@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" focusTraversable="false" prefHeight="280.0" prefWidth="500.0" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="softwareprojectfx.FXMLDocumentController">
+  <children>
+    <Label fx:id="titleLabel" alignment="CENTER" layoutX="1.0" layoutY="4.0" prefHeight="50.0" prefWidth="500.0" text="DnD Dice Roller" textAlignment="CENTER" textFill="RED" underline="true">
+      <font>
+        <Font name="Bell MT Bold" size="30.0" />
+      </font>
+    </Label>
+    <Label fx:id="dieLabel" prefHeight="34.0" prefWidth="43.0" text="Die" textFill="BLUE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="60.0">
+      <font>
+        <Font name="System Bold" size="25.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="rollLabel" alignment="CENTER" font="$x1" layoutX="229.0" layoutY="60.0" prefWidth="43.0" text="#" textFill="BLUE" />
+    <Label id="subLabel" fx:id="modLabel" alignment="CENTER" font="$x1" layoutY="60.0" text="Mod" textFill="BLUE" AnchorPane.rightAnchor="50.0" />
+    <Label fx:id="totalLabel" alignment="CENTER" font="$x1" layoutX="389.0" layoutY="184.0" prefWidth="74.0" text="Total" textFill="BLUE" />
+    <ChoiceBox fx:id="dieChoice" layoutX="24.0" layoutY="125.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button font="$x1" layoutY="201.0" maxWidth="90.0" minHeight="34.0" mnemonicParsing="false" onAction="#rollButton" prefHeight="50.0" text="Roll" textFill="BLUE" AnchorPane.leftAnchor="85.0" />
+    <Label fx:id="outputLabel" alignment="CENTER" layoutX="376.0" layoutY="219.0" prefHeight="20.0" prefWidth="100.0" text="Output" />
+    <TextField fx:id="rollText" alignment="CENTER" layoutX="192.0" layoutY="123.0" prefWidth="118.0" text="0" />
+    <Label fx:id="countLabel" alignment="CENTER" layoutX="223.0" layoutY="103.0" prefWidth="55.0" text="1 - 100" />
+    <Label fx:id="modChoiceLabel" layoutX="386.0" layoutY="105.0" prefWidth="74.0" text="-100 - 100" />
+    <TextField fx:id="modText" alignment="CENTER" layoutX="364.0" layoutY="123.0" prefWidth="118.0" text="0" />
+    <Label fx:id="rollWarning" alignment="CENTER" layoutX="194.0" layoutY="152.0" prefWidth="116.0" text="" />
+    <Label fx:id="modWarning" layoutX="364.0" layoutY="152.0" prefWidth="118.0" text="" />
+    <Button fx:id="helpButton" layoutX="15.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpScreen" text="Help" />
+  </children>
+</AnchorPane>

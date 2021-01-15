@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SoftwareProjectFX.jnlp">
+  <information>
+    <title>SoftwareProjectFX</title>
+    <vendor>dunba</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SoftwareProjectFX.jar" size="6000" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="softwareprojectfx.SoftwareProjectFX"  name="SoftwareProjectFX" />
+  <update check="always"/>
+</jnlp>

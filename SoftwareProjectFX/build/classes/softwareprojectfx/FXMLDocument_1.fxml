@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" focusTraversable="false" prefHeight="280.0" prefWidth="500.0" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="softwareprojectfx.FXMLDocumentController">
+  <children>
+    <Label fx:id="titleLabel" alignment="CENTER" layoutX="1.0" layoutY="4.0" prefHeight="50.0" prefWidth="500.0" text="DnD Dice Help" textAlignment="CENTER" textFill="RED" underline="true">
+      <font>
+        <Font name="Bell MT Bold" size="30.0" />
+      </font>
+    </Label>
+    <Label fx:id="dieLabel" prefHeight="34.0" prefWidth="53.0" text="Die:" textFill="BLUE" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="60.0">
+      <font>
+        <Font name="System Bold" size="25.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="rollLabel" alignment="CENTER" font="$x1" layoutX="56.0" layoutY="113.0" prefWidth="43.0" text="#:" textFill="BLUE" />
+    <Label id="subLabel" fx:id="modLabel" alignment="CENTER" font="$x1" layoutY="162.0" text="Mod:" textFill="BLUE" AnchorPane.rightAnchor="407.0" />
+    <Label fx:id="totalLabel" alignment="CENTER" font="$x1" layoutX="43.0" layoutY="208.0" text="Roll:" textFill="BLUE" />
+    <ChoiceBox fx:id="dieChoice" layoutX="450.0" layoutY="14.0" minHeight="0.0" minWidth="2.0" prefHeight="0.0" prefWidth="2.0" visible="false">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+    <Button font="$x1" layoutY="60.0" maxWidth="90.0" minHeight="0.0" minWidth="2.0" mnemonicParsing="false" onAction="#rollButton" prefHeight="0.0" prefWidth="2.0" text="Roll" textFill="BLUE" AnchorPane.leftAnchor="17.0" />
+    <Label fx:id="outputLabel" alignment="CENTER" layoutX="105.0" layoutY="214.0" prefHeight="22.0" prefWidth="271.0" text="Roll the &quot;dice&quot; and view the outcome">
+      <font>
+        <Font size="16.0" fx:id="x2" />
+      </font>
+    </Label>
+    <TextField fx:id="rollText" alignment="CENTER" layoutX="465.0" layoutY="90.0" minWidth="2.0" prefHeight="7.0" prefWidth="2.0" text="0" visible="false" />
+    <Label fx:id="countLabel" alignment="CENTER" font="$x2" layoutX="99.0" layoutY="172.0" prefWidth="363.0" text="Add a modifier to add/subtract from final result" />
+    <Label fx:id="modChoiceLabel" font="$x2" layoutX="105.0" layoutY="123.0" prefWidth="363.0" text="Type the amount of rolls you want" />
+    <TextField fx:id="modText" alignment="CENTER" layoutX="482.0" layoutY="142.0" minWidth="0.0" prefHeight="7.0" prefWidth="0.0" text="0" visible="false" />
+    <Label fx:id="rollWarning" alignment="CENTER" font="$x2" layoutX="105.0" layoutY="67.0" minHeight="20.0" prefHeight="27.0" prefWidth="351.0" text="Select the amount of sides for the simulated dice" />
+    <Label fx:id="modWarning" layoutX="364.0" layoutY="152.0" prefWidth="118.0" text="" />
+    <Button fx:id="helpButton" layoutX="15.0" layoutY="11.0" minHeight="7.0" minWidth="0.0" mnemonicParsing="false" onAction="#helpScreen" prefHeight="7.0" prefWidth="0.0" text="Help" />
+  </children>
+</AnchorPane>
